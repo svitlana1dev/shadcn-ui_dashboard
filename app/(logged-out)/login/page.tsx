@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -31,6 +32,8 @@ const formSchema = z.object({
 });
 
 const LoginPage = () => {
+  const router = useRouter();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -39,8 +42,9 @@ const LoginPage = () => {
     },
   });
 
-  const handleOnSubmit = () => {
-    console.log("login");
+  const handleOnSubmit = (data: z.infer<typeof formSchema>) => {
+    console.log(data);
+    router.push("/dashboard");
   };
 
   return (
