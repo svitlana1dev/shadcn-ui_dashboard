@@ -1,5 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import EmployeesStatus from "./components/employees-status";
+import EmployeesStatus from "./components/employees/employees-status";
 
 const DashboardPage = () => {
   return (

@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import MainMenu from "./components/main-menu";
+import MainMenu from "./components/teams/main-menu";
 
 type Props = {
   children: ReactNode;
