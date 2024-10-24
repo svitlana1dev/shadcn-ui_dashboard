@@ -1,4 +1,4 @@
-import { AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Avatar } from "@radix-ui/react-avatar";
+
 import {
   AlertTriangleIcon,
   BadgeCheckIcon,
@@ -20,7 +20,7 @@ import {
 import Link from "next/link";
 import WorkLocationTrends from "./work-location-trends";
 
-const EmployeesStatus = () => {
+const EmployeesStats = () => {
   const totalEmployees = 100;
   const presentEmployees = 70;
   const presentEmployeesPercentage = (presentEmployees / totalEmployees) * 100;
@@ -113,4 +113,4 @@ const EmployeesStatus = () => {
     </>
   );
 };
-export default EmployeesStatus;
+export default EmployeesStats;
