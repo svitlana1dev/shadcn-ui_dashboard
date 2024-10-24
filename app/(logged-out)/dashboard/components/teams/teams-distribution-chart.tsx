@@ -1,6 +1,5 @@
 "use client";
 
-import { Tooltip, TooltipProvider } from "@/components/ui/tooltip";
 import { Cell, Pie, ResponsiveContainer, PieChart } from "recharts";
 
 const data = [
