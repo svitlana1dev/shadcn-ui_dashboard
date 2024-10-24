@@ -24,16 +24,12 @@ const data = [
 const TeamsDistributionChart = () => {
   return (
     <ResponsiveContainer width="100%" height={150}>
-      <PieChart>
-        <TooltipProvider>
-          <Tooltip>
-            <Pie data={data} dataKey={"value"} nameKey="name">
-              {data.map(({ value, color }) => {
-                return <Cell key={value} fill={color} />;
-              })}
-            </Pie>
-          </Tooltip>
-        </TooltipProvider>
+      <PieChart width={400} height={400}>
+        <Pie data={data} dataKey="value" nameKey="name">
+          {data.map((item, index) => {
+            return <Cell key={`cell-${index}`} fill={item.color} />;
+          })}
+        </Pie>
       </PieChart>
     </ResponsiveContainer>
   );

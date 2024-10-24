@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import TeamsDistributionChart from "./teams-distribution-chart";
+import SupportTicketsResolved from "./support-tickets-resolved";
 
 const teamLeaders = [
   {
@@ -130,7 +131,7 @@ const TeamsStats = () => {
         </CardHeader>
 
         <CardContent className="pl-0">
-          <TeamsDistributionChart />
+          <SupportTicketsResolved />
         </CardContent>
       </Card>
     </>
