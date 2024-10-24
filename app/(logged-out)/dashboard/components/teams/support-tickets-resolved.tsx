@@ -1,3 +1,5 @@
+"use client";
+
 import {
   CartesianGrid,
   Legend,
@@ -87,16 +89,15 @@ const SupportTicketsResolved = () => {
   return (
     <ResponsiveContainer height={350} width="100%">
       <LineChart data={data}>
-        <XAxis fontSize={12} />
-        <YAxis fontSize={12} />
-        <CartesianGrid strokeDasharray={3}>
-          <Line type="monotone" dataKey="delta" stroke="pink" />
-          <Line type="monotone" dataKey="alpha" stroke="pink" />
-          <Line type="monotone" dataKey="canary" stroke="pink" />
-          <Legend
-            formatter={(value) => <span className="catitalize">value</span>}
-          />
-        </CartesianGrid>
+        <XAxis fontSize={12} dataKey="name" stroke="#888" />
+        <YAxis fontSize={12} stroke="#888" />
+        <CartesianGrid strokeDasharray={3} />
+        <Line type="monotone" dataKey="delta" stroke="#84cc16" />
+        <Line type="monotone" dataKey="alpha" stroke="#3b8216" />
+        <Line type="monotone" dataKey="canary" stroke="#f97316" />
+        <Legend
+          formatter={(value) => <span className="capitalize">{value}</span>}
+        />
       </LineChart>
     </ResponsiveContainer>
   );
